@@ -19,3 +19,12 @@
 .container {
 	width: 100% !important;
 }
+
+.btn {
+	padding: 6px 26px !important;
+}
+
+.caret {
+	margin-left: -20px !important;
+}
+
