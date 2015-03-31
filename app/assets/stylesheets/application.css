@@ -28,6 +28,11 @@
 	margin-left: -20px !important;
 }
 
+.nav-header {
+  margin-left: 15px;
+  color: #fff;
+}
+
 /*!
  * cooker.drawer.css
  * cooker v0.1.4
@@ -109,7 +114,7 @@
   text-decoration: none;
 }
 .drawer-default .drawer-nav li a {
-  padding: 15px;
+  padding: 5px 15px;
   color: #888;
 }
 .drawer-default .drawer-nav li a:hover {
