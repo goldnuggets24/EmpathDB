@@ -123,6 +123,10 @@
 .drawer-default .drawer-nav li ul a {
   padding: 8px 20px;
 }
+
+.dropdown-menu {
+  min-width: 174px !important;
+}
 /*
 @media (min-width: (@screen-tablet - 1)) { // 768pxä»¥ä¸‹
   .drawer-toggle{
