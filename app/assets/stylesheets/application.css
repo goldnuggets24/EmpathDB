@@ -15,3 +15,7 @@
  *= require twbs
  *= require_tree .
  */
+
+.container {
+	width: 100% !important;
+}

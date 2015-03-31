@@ -10,6 +10,8 @@ html lang=I18n.locale.to_s
 
     = stylesheet_link_tag 'application', media: 'all', data: { turbolinks_track: true }
 
+    = stylesheet_link_tag 'http://www.jqueryscript.net/demo/jQuery-CSS3-Sliding-Menu-Using-Navigation-Drawer-Drawer/cooker.drawer.css', 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'
+
     /! Favicons
     link href=asset_path('apple-touch-icon-precomposed.png') rel='apple-touch-icon-precomposed' sizes='144x144'
 
@@ -21,8 +23,45 @@ html lang=I18n.locale.to_s
       = javascript_include_tag '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js', 'respond.js'
 
   body
-    == render 'shared/navbar'
+    / == render 'shared/navbar'
 
-    #main-container.container= yield
+    button.drawer-toggle.btn.btn-outline-white 
+      small Graph Functions
+    .drawer.drawer-default
+      nav.drawer-nav role="navigation" 
+        .drawer-brand
+          a href="#"  Data Functions
+        ul.nav.drawer-nav-list
+          li
+            a href="#"  Home
+          li
+            a href="#"  Dropdown
+          li
+            a href="#"  Most Popular Plugins
+          li
+            a href="#"  Recommended Plugins
+          li
+            a href="#"  Blog
+      .container
+        .dropdown
+          button#menu1.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button" 
+            | Options
+          span.caret
+          ul.dropdown-menu aria-labelledby="menu1" role="menu" 
+            li role="presentation" 
+              a href="#" role="menuitem" tabindex="-1"  First Choice
+            li role="presentation" 
+              a href="#" role="menuitem" tabindex="-1"  Second Choice
+            li role="presentation" 
+              a href="#" role="menuitem" tabindex="-1"  Third Choice
+            li.divider role="presentation" 
+            li role="presentation" 
+              a href="#" role="menuitem" tabindex="-1"  Fourth Choice
+
+    #main-container.container.drawer-overlay= yield
 
     == render 'shared/footer'
+
+    script src='http://www.jqueryscript.net/demo/jQuery-CSS3-Sliding-Menu-Using-Navigation-Drawer-Drawer/cooker.drawer.js'
+    script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'
+    scrip src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
