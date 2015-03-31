@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['STARTER_APP_DEV_DB_DATABASE'] || 'starterapp_development' %>
+  database: <%= ENV['STARTER_APP_DEV_DB_DATABASE'] || 'empath_development' %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
