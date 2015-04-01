@@ -1,5 +1,5 @@
 - title t('hello')
-h1[style="position: absolute; top: 0; right: 0;"]
+h2[style="position: absolute; bottom: 0; right: 0;z-index: 1; color: rgba(255,255,255,0.7);"]
   | EmpathDB Demo
 ul.list-inline.lead
 
@@ -8,25 +8,28 @@ ul.list-inline.lead
 	  .row-same-height.row-full-height
 	    .col-md-4.col-md-height.col-full-height.watchlist[style="min-width: 500px;"]
 	      .item
-	        .content
-	        	.mapContainer[style="width: 100%;"]
-					#multi_markers[style='width: 500px; min-height: 678px;']
+	        .content 
+	        	h2 WATCH LIST
 	    .col-md-4.col-md-height.col-full-height.data
 	      .item
 	        .content 
-	        	h3 WATCH LIST
-	    .col-md-4.col-md-height.col-full-height.map
+	        	h2 NETWORK
+	    .col-md-4.col-md-height.col-full-height.map.pull-right
 	      .item
-	        .content jlkklj
+			.content 
+				h2[style="position: absolute; top: 0; right: 0;z-index: 1; color: rgb(0,0,0);"]
+					| MAP
+				.mapContainer[style="width: 100%;"]
+					#multi_markers[style='width: 500px; min-height: 678px;']
 
 javascript:
 	$(document).ready(function(){
 		var handler = Gmaps.build('Google');
 		handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
 		  var markers = handler.addMarkers([
-		    { lat: 40.680638, lng: -73.9597, "infowindow": "hello!"},
-		    { lat: 40.680638, lng: -73.9587, "infowindow": "Yes!"},
-		    { lat: 40.680638, lng: -73.9557, "infowindow": "I know!"}
+		    { lat: 40.680638, lng: -73.9597, "infowindow": "MAC ADDRESS: 3456479048309"},
+		    { lat: 40.680638, lng: -73.9587, "infowindow": "MAC ADDRESS: 345645335"},
+		    { lat: 40.680638, lng: -73.9557, "infowindow": "MAC ADDRESS: 11223"}
 		  ]);
 		  handler.bounds.extendWith(markers);
 		  handler.fitMapToBounds();
