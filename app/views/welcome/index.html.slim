@@ -6,33 +6,27 @@ ul.list-inline.lead
 .container
 	.row
 	  .row-same-height.row-full-height
-	    .col-md-4.col-md-height.col-full-height.watchlist
+	    .col-md-4.col-md-height.col-full-height.watchlist[style="min-width: 500px;"]
 	      .item
 	        .content
-	        	.mapContainer[style="width: 800px;"]
-					#map[style='width: 800px; height: 400px;']
+	        	.mapContainer[style="width: 100%;"]
+					#multi_markers[style='width: 500px; min-height: 678px;']
 	    .col-md-4.col-md-height.col-full-height.data
 	      .item
-	        .content kjlkj
+	        .content 
+	        	h3 WATCHLIST
 	    .col-md-4.col-md-height.col-full-height.map
 	      .item
 	        .content jlkklj
 
 javascript:
 	$(document).ready(function(){
-		handler = Gmaps.build('Google');
-		handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-		  markers = handler.addMarkers([
-		    {
-		      "lat": 0,
-		      "lng": 0,
-		      "picture": {
-		        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-		        "width":  36,
-		        "height": 36
-		      },
-		      "infowindow": "hello!"
-		    }
+		var handler = Gmaps.build('Google');
+		handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
+		  var markers = handler.addMarkers([
+		    { lat: 40.680638, lng: -73.9597, "infowindow": "hello!"},
+		    { lat: 40.680638, lng: -73.9587, "infowindow": "Yes!"},
+		    { lat: 40.680638, lng: -73.9557, "infowindow": "I know!"}
 		  ]);
 		  handler.bounds.extendWith(markers);
 		  handler.fitMapToBounds();
