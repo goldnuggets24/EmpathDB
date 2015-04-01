@@ -15,6 +15,9 @@ gem 'puma'
 # ORM
 gem 'pg'
 
+# Google Maps
+gem 'gmaps4rails'
+
 # Pagination
 # gem 'kaminari'
 
@@ -35,6 +38,7 @@ gem 'slim-rails'
 gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'i18n-js'
+gem 'underscore-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'sass-rails', '~> 5.0'

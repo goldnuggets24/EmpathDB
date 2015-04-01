@@ -20,6 +20,8 @@
 	width: 100% !important;
 }
 
+.col-md-4, .watchlist, .data, .map {max-width: 33.33333%; width: auto !important;}
+
 .btn {
 	padding: 6px 26px !important;
 }
