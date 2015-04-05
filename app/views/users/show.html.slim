@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Latitude:
+  = @user.latitude
+p
+  strong Longitude:
+  = @user.longitude
+p
+  strong Address:
+  = @user.address
+p
+  strong Description:
+  = @user.description
+p
+  strong Title:
+  = @user.title
+
+= link_to 'Edit', edit_user_path(@user)
+'|
+= link_to 'Back', users_path

@@ -15,6 +15,9 @@ gem 'puma'
 # ORM
 gem 'pg'
 
+#geocoder
+gem 'geocoder'
+
 # Google Maps
 gem 'gmaps4rails'
 

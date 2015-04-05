@@ -24,14 +24,10 @@ ul.list-inline.lead
 
 javascript:
 	$(document).ready(function(){
-		var handler = Gmaps.build('Google');
-		handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
-		  var markers = handler.addMarkers([
-		    { lat: 40.680638, lng: -73.9597, "infowindow": "MAC ADDRESS: 3456479048309"},
-		    { lat: 40.680638, lng: -73.9587, "infowindow": "MAC ADDRESS: 345645335"},
-		    { lat: 40.680638, lng: -73.9557, "infowindow": "MAC ADDRESS: 11223"}
-		  ]);
-		  handler.bounds.extendWith(markers);
-		  handler.fitMapToBounds();
+		handler = Gmaps.build('Google');
+  		handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+		    markers = handler.addMarkers(#{raw @hash.to_json});
+		    handler.bounds.extendWith(markers);
+		    handler.fitMapToBounds();
 		});
 	});
