@@ -23,6 +23,8 @@
 
 .col-md-4, .watchlist, .data, .map {max-width: 33.33333%; width: auto !important;}
 
+.map h2 {right: 30% !important;}
+
 .btn {
 	padding: 6px 26px !important;
 }
@@ -80,7 +82,7 @@
   border-radius: 0px !important;
   background: #000 !important;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 1000;
   display: block;
@@ -189,6 +191,13 @@
   bottom: 3%;
   left: 32%;
   width: 300px !important;
+}
+
+.timeRange {
+  position: absolute;
+  z-index: 500;
+  bottom: 1.6%;
+  left: 23% !important;
 }
 
 .slider.slider-horizontal {

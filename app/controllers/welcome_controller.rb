@@ -1,8 +1,12 @@
 class WelcomeController < ApplicationController
 
 	def index
-		if params[:value] == "4"
-			@users = User.first
+		if params[:value] == "2"
+			@users = User.find(2)
+		elsif params[:value] == "3"
+			@users = User.find(3)
+		elsif params[:value] == "4"
+			@users = User.find(4)
 		else
 			@users = User.last
 		end
@@ -11,7 +15,11 @@ class WelcomeController < ApplicationController
   			marker.lng user.longitude
   			marker.infowindow user.title
 		end
-		if params[:value] == "4"
+		if params[:value] == "2"
+			@picture = ActionController::Base.helpers.asset_path("2.png")
+		elsif params[:value] == "3"
+			@picture = ActionController::Base.helpers.asset_path("3.png")
+		elsif params[:value] == "4"
 			@picture = ActionController::Base.helpers.asset_path("4.png")
 		else
 			@picture = ActionController::Base.helpers.asset_path("1.png")

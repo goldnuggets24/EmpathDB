@@ -17,16 +17,15 @@ $(document).ready ->
 
 	$('#ex1').slider().on 'slideStop', (ev) ->
 		newVal = $('#ex1').data('slider').getValue()
-		if newVal == 4
-			$.ajax
-				type: 'GET'
-				url: window.location.pathname
-				dataType: 'html'
-				data:
-					value: newVal
-				success: (data) ->
-					$('.networkImage').replaceWith $('.networkImage', data)
-					$('.script').replaceWith $('.script', data)
+		$.ajax
+			type: 'GET'
+			url: window.location.pathname
+			dataType: 'html'
+			data:
+				value: newVal
+			success: (data) ->
+				$('.networkImage').replaceWith $('.networkImage', data)
+				$('.script').replaceWith $('.script', data)
 
 	#click Circle Zero Options
 	$('.zero').on 'click', -> 
