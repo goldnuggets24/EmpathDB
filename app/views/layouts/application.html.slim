@@ -26,39 +26,35 @@ html lang=I18n.locale.to_s
     / == render 'shared/navbar'
 
     button.drawer-toggle.btn.btn-outline-white 
-      small Graph Functions
+      big.resources RESOURCES
     .drawer.drawer-default
       nav.drawer-nav role="navigation" 
         .drawer-brand
-          a href="#"  Data Functions
+          a href="#"  WATCHLIST
         ul.nav.drawer-nav-list
           hr
-          li.nav-header Some functions
-          li
-            a href="#"  First Function
-          li
-            a href="#"  Second Function
-          li
-            a href="#"  Third Function
-          hr
-          li.nav-header Some More functions
-          li
-            a href="#"  Fourth Function
-          li
-            a href="#"  Fifth Function
+          .col-sm-3.col-md-3
+            form.navbar-form[style="padding-left: 0px; min-width: 260px;"]
+              .input-group
+                input#srch-term.form-control name="srch-term" placeholder="Search Mac Address" type="text" /
+                .input-group-btn
+                  button.btn.btn-default type="submit" 
+                    i.glyphicon.glyphicon-search
       .container
         hr
         .dropdown
-          button#menu1.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button" 
-            | Dropdown Options
+          button#menu1.btn.btn-default.dropdown-toggle.cases data-toggle="dropdown" type="button" 
+            | Cases
           span.caret
           ul.dropdown-menu aria-labelledby="menu1" role="menu" 
             li role="presentation" 
-              a href="#" role="menuitem" tabindex="-1"  Watch List
+              a href="#" role="menuitem" tabindex="-1"  My Cases
             li role="presentation" 
-              a href="#" role="menuitem" tabindex="-1"  Network
+              a href="#" role="menuitem" tabindex="-1"  Case 1
             li role="presentation"
-              a href="#" role="menuitem" tabindex="-1"  Map
+              a href="#" role="menuitem" tabindex="-1"  Case 2
+            li role="presentation"
+              a href="#" role="menuitem" tabindex="-1"  Case 3
 
     #main-container.container.drawer-overlay= yield
 

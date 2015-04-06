@@ -7,23 +7,19 @@ ul.list-inline.lead
 	input#ex1 data-slider-id="ex1Slider" data-slider-max="4" data-slider-min="1" data-slider-step="1" data-slider-value="1" type="text" /
 	.row
 	  .row-same-height.row-full-height
-	    .col-md-4.col-md-height.col-full-height.watchlist[style="min-width: 200px;"]
-	      .item
-	        .content 
-	        	h2 WATCH LIST
-	    .col-md-4.col-md-height.col-full-height.data.network
+	    .col-md-6.col-md-height.col-full-height.data.network
 	      .item
 	        .content
 	        	.zero 0
 	        	h2 NETWORK
 	        	.networkImage= image_tag((@picture), :width => 600)
-	    .col-md-4.col-md-height.col-full-height.map.pull-right
+	    .col-md-6.col-md-height.col-full-height.map.pull-right
 	      .item
 			.content 
 				h2[style="position: absolute; top: 0; right: 0;z-index: 1; color: rgb(0,0,0);"]
 					| MAP
 				.mapContainer[style="width: 100%;"]
-					#multi_markers[style='width: 500px; min-height: 678px;']
+					#multi_markers[style='min-height: 678px;']
 .script
 	javascript:
 		$(document).ready(function(){
