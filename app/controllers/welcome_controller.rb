@@ -2,13 +2,13 @@ class WelcomeController < ApplicationController
 
 	def index
 		if params[:value] == "2"
-			@users = User.find(2)
+			@users = User.where(:time_range => "week")
 		elsif params[:value] == "3"
-			@users = User.find(3)
+			@users = User.where(:time_range => "month")
 		elsif params[:value] == "4"
-			@users = User.find(4)
+			@users = User.where(:time_range => "year")
 		else
-			@users = User.first
+			@users = User.where(:time_range => "day")
 		end
 		@hash = Gmaps4rails.build_markers(@users) do |user, marker|
 		 	marker.lat user.latitude
