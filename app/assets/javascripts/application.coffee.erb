@@ -11,13 +11,13 @@
 # about supported directives.
 #
 #= require jquery
-#= require jquery_ujs
 #= require jquery.turbolinks
-#= require turbolinks
+#= require jquery_ujs
 #= require bootstrap3
 #= require cookie.drawer.js
 #= require gmaps/google
 #= require underscore.js
+#= require bootstrap-slider.js
 
 # BOOTSTRAP
 #= require twbs/bootstrap
@@ -32,6 +32,4 @@
 I18n.defaultLocale = '<%= I18n.default_locale.to_s %>'
 I18n.locale = document.getElementsByTagName('html')[0].getAttribute('lang')
 
-$(document).ready ->
-  $('.drawer').drawer desktopEvent: 'click'
-  return
+#= require turbolinks

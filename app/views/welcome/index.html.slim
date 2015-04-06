@@ -2,18 +2,20 @@
 h2[style="position: absolute; bottom: 0; right: 0;z-index: 1; color: rgba(255,255,255,0.7);"]
   | EmpathDB Demo
 ul.list-inline.lead
-
 .container
+	input#ex1 data-slider-id="ex1Slider" data-slider-max="4" data-slider-min="1" data-slider-step="1" data-slider-value="1" type="text" /
 	.row
 	  .row-same-height.row-full-height
-	    .col-md-4.col-md-height.col-full-height.watchlist[style="min-width: 500px;"]
+	    .col-md-4.col-md-height.col-full-height.watchlist[style="min-width: 200px;"]
 	      .item
 	        .content 
 	        	h2 WATCH LIST
-	    .col-md-4.col-md-height.col-full-height.data
+	    .col-md-4.col-md-height.col-full-height.data.network
 	      .item
-	        .content 
+	        .content
+	        	.zero 0
 	        	h2 NETWORK
+	        	.networkImage= image_tag((@picture), :width => 600)
 	    .col-md-4.col-md-height.col-full-height.map.pull-right
 	      .item
 			.content 
@@ -21,13 +23,13 @@ ul.list-inline.lead
 					| MAP
 				.mapContainer[style="width: 100%;"]
 					#multi_markers[style='width: 500px; min-height: 678px;']
-
-javascript:
-	$(document).ready(function(){
-		handler = Gmaps.build('Google');
-  		handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
-		    markers = handler.addMarkers(#{raw @hash.to_json});
-		    handler.bounds.extendWith(markers);
-		    handler.fitMapToBounds();
+.script
+	javascript:
+		$(document).ready(function(){
+			handler = Gmaps.build('Google');
+	  		handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+			    markers = handler.addMarkers(#{raw @hash.to_json});
+			    handler.bounds.extendWith(markers);
+			    handler.fitMapToBounds();
+			});
 		});
-	});

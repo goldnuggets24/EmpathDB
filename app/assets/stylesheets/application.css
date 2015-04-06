@@ -13,6 +13,7 @@
  *= require_self
  *= stub twbs-variables
  *= require twbs
+ *= require bootstrap-slider
  *= require_tree .
  */
 
@@ -131,6 +132,10 @@
 .dropdown-menu {
   min-width: 174px !important;
 }
+
+#ex1Slider .slider-selection {
+  background: #BABABA;
+}
 /*
 @media (min-width: (@screen-tablet - 1)) { // 768pxä»¥ä¸‹
   .drawer-toggle{
@@ -155,3 +160,41 @@
   }
 }
 */
+
+.network {
+  min-width: 600px;
+  height: 674px;
+}
+
+.network img {
+  margin-top: -15px;
+}
+
+.network h2 {
+  text-align: center !important;
+}
+
+.network .zero {
+  position: absolute;
+  left: 48%;
+  top: 47%;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999999px;
+}
+
+#ex1Slider {
+  position: absolute;
+  z-index: 500;
+  bottom: 3%;
+  left: 32%;
+  width: 300px !important;
+}
+
+.slider.slider-horizontal {
+  width: 400px;
+}
+
+.tooltip.top {
+  margin-top: -36px !important;
+}
